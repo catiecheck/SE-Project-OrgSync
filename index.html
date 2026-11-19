@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +19,13 @@
     </header>
 
     <main>
+
+      <nav class="app-tabs" aria-label="Main navigation">
+        <a href="#" class="tabs">Calendar</a>
+        <a href="#" class="tabs">Orgs</a>
+        <a href="#" class="tabs">Saved</a>
+      </nav>
+
       <section class="search-section">
         <input
           type="search"
@@ -29,34 +35,42 @@
       </section>
 
       <div class="content-layout">
+
         <section class="calendar" aria-label="Event calendar">
+
           <div class="calendar-header">
-            <!-- will need to replace this placeholder header with changable months -->
-            <h2>October 2026</h2>
-            <nav>
+            <div class="calendar-navigation">
+              <button id="previous-month" type="button" aria-label="Previous month">
+                &lt;
+              </button>
+
+              <h2 id="calendar-month">December 2026</h2>
+
+              <button id="next-month" type="button" aria-label="Next month">
+                &gt;
+              </button>
+            </div>
+
+            <nav aria-label="Calendar view">
               <button class="view options" type="button">Day</button>
               <button class="view options" type="button">Week</button>
               <button class="view options" type="button">Month</button>
             </nav>
           </div>
 
-          <div class="calendar-grid">
-            <!-- Calendar cells will be added later -->
+          <div class="calendar-grid" id="calendar-grid">
+            <!-- Calendar dates will be generated from JavaScript -->
           </div>
+
         </section>
 
-        <aside class="event-details">
-          <h2>GS Engineering Symposium</h2>
-          <p>Engineering Symposium to showcase grad students works.</p>
+
+        <aside class="event-details" id="event-details">
+          <h2>Event Details</h2>
+          <p>Select an event to view its details.</p>
         </aside>
       </div>
     </main>
-
-    <footer class="app-tabs">
-      <a href="#" class="tabs">Calendar</a>
-      <a href="#" class="tabs">Orgs</a>
-      <a href="#" class="tabs">Saved</a>
-    </footer>
   </div>
 </body>
 </html>
